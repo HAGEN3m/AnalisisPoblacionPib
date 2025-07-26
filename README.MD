@@ -1,83 +1,104 @@
-📊 Análisis de Indicadores Económicos Mundiales
+# 📊 Análisis de la Relación entre Población y PIB Mundial
 
-Este proyecto explora y analiza indicadores económicos a nivel global, con foco en la relación entre población, ingreso nacional bruto (GNI) y producto interno bruto (PIB). El objetivo fue evaluar si estas variables pueden ayudar a predecir el PIB de un país.
+Este proyecto explora la relación entre la **población** y el **Producto Interno Bruto (PIB)** a lo largo del tiempo, utilizando datos económicos de países de todo el mundo. Se incluyen análisis exploratorios, modelado predictivo y visualizaciones interactivas para comunicar hallazgos clave.
 
-🔍 Objetivo del proyecto
+---
 
-Realizar un análisis exploratorio de los datos para entender patrones y relaciones clave.
+## 🎯 Objetivo
 
-Limpiar y preparar los datos para modelado.
+Analizar cómo la población y el Ingreso Nacional Bruto (GNI) influyen en el crecimiento económico global. A partir de esto:
 
-Desarrollar un modelo de regresión lineal múltiple para predecir el PIB usando población y GNI.
+* Detectar patrones y desigualdades entre países.
+* Evaluar correlaciones entre variables económicas clave.
+* Predecir el PIB mediante modelos de regresión.
+* Comunicar insights relevantes mediante un dashboard en Power BI.
 
-Evaluar el desempeño del modelo.
+---
 
-📈 Dataset
+## 🧠 Metodología
 
-El dataset incluye indicadores por país y año como:
+1. **Análisis exploratorio (EDA):** distribución de variables, outliers, correlaciones.
+2. **Limpieza de datos:** filtrado, renombrado y tratamiento de nulos.
+3. **Modelado predictivo:** regresión lineal múltiple para estimar el PIB.
+4. **Visualizaciones finales:** creación de un dashboard interactivo.
+5. **Documentación y comunicación de hallazgos.**
 
-Población
+---
 
-Ingreso Nacional Bruto (GNI)
+## 🛠️ Herramientas utilizadas
 
-Producto Interno Bruto (PIB)
+* Python: `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
+* Jupyter Notebooks (Visual Studio Code / Anaconda)
+* Power BI (dashboard final interactivo)
+* Git y GitHub (control de versiones y publicación)
+* Markdown para documentación clara
 
-Se utilizaron datos a partir del año 2000.
+---
 
-📊 Principales hallazgos
+## 📁 Estructura del proyecto
 
-El crecimiento poblacional es sostenido a nivel global.
+```
+analisisPoblacionPib/
+├── data/                         # Archivos de datos originales y procesados
+│   ├── Global_Economy_Indicators.csv
+│   └── datos_limpios.csv
+│
+├── notebooks/                   # Notebooks del análisis completo
+│   ├── 01_analisis_eda_preliminar.ipynb
+│   ├── 02_limpieza_datos.ipynb
+│   ├── 03_modelado_regresion.ipynb
+│   ├── 04_visualizaciones_finales.ipynb
+│   └── 05_conclusiones.ipynb
+│
+├── visualizaciones/            # Dashboard interactivo
+│   └── dashboard_indicadores_economicos.pbix
+│
+├── README.md                    # Documentación principal
+├── requirements.txt             # Librerías necesarias
+└── .gitignore                   # Archivos/carpetas ignoradas por Git
+```
 
-GNI y PIB presentan outliers por países con economías muy grandes.
+---
 
-Existe alta correlación entre PIB, GNI y población.
+## 🔍 Principales hallazgos
 
-🔧 Modelado predictivo
+* El **PIB global** muestra un crecimiento sostenido desde 1960.
+* Existe **alta correlación entre PIB, población y GNI**, especialmente en economías grandes.
+* El modelo de **regresión lineal múltiple** predice el PIB con una precisión sobresaliente (R² ≈ 0.9997).
+* Las economías con mayor PIB per cápita no siempre son las más pobladas.
 
-Se entrenó un modelo de regresión lineal con dos variables:
+---
 
-X: población, gni
+## 📊 Visualización final
 
-y: pib
+El proyecto incluye un **dashboard interactivo en Power BI**, con gráficos sobre:
 
-Resultados:
+* Evolución global del PIB por año.
+* PIB acumulado por país (mapa).
+* Comparación de GNI, PIB y población (gráfico de burbujas).
+* PIB por país (barras apiladas por año).
+* PIB per cápita acumulado por país.
 
-MAE ≈ 4.34 mil millones USD
+📁 Ubicación: `visualizaciones/dashboard_indicadores_economicos.pbix`
 
-RMSE ≈ 14.19 mil millones USD
+---
 
-R² ≈ 0.9997
+## ✅ Cómo ejecutar el proyecto
 
-✅ El modelo muestra excelente ajuste, aunque las variables están altamente correlacionadas.
+1. Clonar el repositorio.
+2. Instalar dependencias:
 
-🚨 Limitaciones
+```bash
+pip install -r requirements.txt
+```
 
-Alta multicolinealidad entre población y GNI puede hacer redundante el modelo.
+3. Abrir los notebooks desde la carpeta `notebooks/` y ejecutar paso a paso.
+4. Abrir el archivo `.pbix` en Power BI Desktop para explorar el dashboard.
 
-No se consideraron otras variables económicas (como exportaciones, educación, etc.).
+---
 
-Se mantuvieron outliers por su relevancia macroeconómica.
+## 🚀 Próximos pasos (opcional)
 
-🚀 Futuras mejoras
-
-Probar modelos no lineales o con regularización.
-
-Incluir nuevas variables.
-
-Crear dashboards interactivos con Power BI, Tableau o Looker Studio.
-
-📁 Estructura del proyecto
-
-01_analisis_eda_preliminar.ipynb: análisis exploratorio.
-
-02_limpieza_datos.ipynb: limpieza de datos.
-
-03_modelado_regresion.ipynb: modelo predictivo.
-
-04_visualizaciones_finales.ipynb: gráficos clave.
-
-05_conclusiones.ipynb: resumen y hallazgos.
-
-🙌 Autor
-
-Proyecto desarrollado por HAGEN3M como parte de su formación en Data Science e Inteligencia Artificial.
+* Evaluar modelos más complejos (Random Forest, XGBoost).
+* Incluir más variables económicas (inflación, exportaciones, educación, etc.).
+* Publicar el dashboard online para mayor accesibilidad.
